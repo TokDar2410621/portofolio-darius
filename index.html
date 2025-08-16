@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Accueil — Tokam Darius</title>
+  <meta name="description" content="Portfolio de Tokam Darius — Développeur Web | Étudiant en Informatique à Jonquière." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="home">
+
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="Aller à l'accueil">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span>Tokam Darius</span>
+      </a>
+      <div>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">☰ Menu</button>
+        <nav aria-label="Navigation principale">
+          <ul id="primary-nav">
+          <li><a href="index.html" class="active">Accueil</a></li>
+          <li><a href="about.html" class="">À propos</a></li>
+          <li><a href="projects.html" class="">Projets</a></li>
+          <li><a href="contact.html" class="">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero__grid">
+        <div>
+          <span class="badge"><span class="dot" aria-hidden="true"></span> Disponible pour stages & missions</span>
+          <h1>Développeur Web & Étudiant en Informatique</h1>
+          <p class="lead">Étudiant en informatique au Cégep de Jonquière, passionné par l’intelligence artificielle et l’automatisation de données. Je conçois des solutions innovantes pour simplifier et optimiser les processus numériques.</p>
+          <div class="cta">
+            <a class="btn btn--primary" href="projects.html">Voir mes projets</a>
+            <a class="btn" href="contact.html">Me contacter</a>
+          </div>
+        </div>
+        <div class="hero__photo" aria-label="Espace photo professionnelle">
+          <span>Ajoutez ici votre photo pro</span>
+        </div>
+      </div>
+    </section>
+    <hr class="rule" />
+    <section class="section container">
+      <h2>En bref</h2>
+      <p class="sub">Profil sérieux, orienté résultats et qualité logicielle.</p>
+      <div class="about">
+        <article class="about__card">
+          <h3>Qui je suis</h3>
+          <p>Je suis <strong>Tokam Darius</strong>, étudiant en informatique au <strong>Cégep de Jonquière</strong>. J’aime transformer des idées en produits concrets : applications web, outils d’automatisation et intégrations simples à maintenir.</p>
+          <p>Intérêts : <em>IA appliquée</em>, <em>automatisation de données</em>, <em>APIs</em>, <em>bonnes pratiques</em>.</p>
+        </article>
+        <article class="about__card">
+          <h3>Ce que je recherche</h3>
+          <ul class="stack-3">
+            <li>Stages ou missions freelance (backend/frontend).</li>
+            <li>Intégration d’IA : extraction, classification, assistants.</li>
+            <li>Équipes qui valorisent qualité, apprentissage et impact.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer__grid">
+      <div>© <span id="year"></span> Tokam Darius. Tous droits réservés.</div>
+      <div>Construit avec HTML & CSS.</div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const btn=document.querySelector('.menu-toggle');const menu=document.getElementById('primary-nav');
+    if(btn&&menu){btn.addEventListener('click',()=>{const isOpen=menu.classList.toggle('open');btn.setAttribute('aria-expanded',String(isOpen));});}
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Tokam Darius</title>
+  <meta name="description" content="Contactez Tokam Darius — Développeur Web | Étudiant en Informatique." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="Aller à l'accueil">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span>Tokam Darius</span>
+      </a>
+      <div>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">☰ Menu</button>
+        <nav aria-label="Navigation principale">
+          <ul id="primary-nav">
+            <li><a href="index.html" class="">Accueil</a></li>
+            <li><a href="about.html" class="">À propos</a></li>
+            <li><a href="projects.html" class="">Projets</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="section container">
+    <h2>Contact</h2>
+    <p class="sub">Envoyez-moi un message. Le formulaire ci-dessous utilise mailto: pour rester simple.</p>
+    <div class="contact">
+<form id="contactForm" novalidate>
+  <div>
+    <label for="nom">Nom</label>
+    <input id="nom" name="name" type="text" placeholder="Votre nom" required>
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" placeholder="votre@email.com" required>
+  </div>
+
+  <div>
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="Bonjour…" required></textarea>
+  </div>
+
+  <!-- Honeypot anti-spam -->
+  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+  <button id="sendBtn" class="btn btn--primary" type="submit">Envoyer</button>
+  <p id="status" class="note" aria-live="polite"></p>
+</form>
+
+<!-- Boîte de dialogue succès -->
+<dialog id="successModal" class="modal">
+  <div class="modal__card">
+    <h3>✅ Message envoyé</h3>
+    <p>Merci pour votre message. Je vous réponds rapidement.</p>
+    <button id="closeModal" class="btn">Fermer</button>
+  </div>
+</dialog>
+
+<!-- Boîte de dialogue erreur -->
+<dialog id="errorModal" class="modal">
+  <div class="modal__card">
+    <h3>⚠️ Échec de l’envoi</h3>
+    <p id="errorText">Une erreur est survenue. Réessayez dans un instant.</p>
+    <button id="closeError" class="btn">Fermer</button>
+  </div>
+</dialog>
+
+<!-- Ton script -->
+<script src="assets/js/send_mail.js" defer></script>
+
+      <aside class="about__card">
+        <h3>Infos & liens</h3>
+        <ul class="stack-3">
+          <li><strong>Localisation :</strong> Jonquière, Québec</li>
+          <li><strong>Disponibilité :</strong> Temps partiel / Stage</li>
+          <li class="social">
+            <a href="#" aria-label="GitHub">GitHub</a>
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            <a href="#" aria-label="CV">CV (PDF)</a>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer__grid">
+      <div>© <span id="year"></span>-<span id="month"></span>-<span id="day"></span> Tokam Darius. Tous droits réservés.</div>
+      <div>Construit avec HTML & CSS.</div>
+    </div>
+  </footer>
+  <script src="assets/js/showDate.js" defer></script>
+  <script src="assets/js/send_mail.js" defer></script>
+</body>
+
+</html>

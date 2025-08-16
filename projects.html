@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projets — Tokam Darius</title>
+  <meta name="description" content="Projets de Tokam Darius — Développeur Web | Étudiant en Informatique." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="Aller à l'accueil">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span>Tokam Darius</span>
+      </a>
+      <div>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">☰ Menu</button>
+        <nav aria-label="Navigation principale">
+          <ul id="primary-nav">
+          <li><a href="index.html" class="">Accueil</a></li>
+          <li><a href="about.html" class="">À propos</a></li>
+          <li><a href="projects.html" class="active">Projets</a></li>
+          <li><a href="contact.html" class="">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="section container">
+    <h2>Projets</h2>
+    <p class="sub">Quelques réalisations (ou prototypes en cours). Remplace les placeholders par tes projets.</p>
+    <div class="projects">
+      <article class="card">
+        <div class="card__media" aria-label="Aperçu du projet 1">Visuel projet</div>
+        <div class="card__body">
+          <div class="card__title">Housing AI — plateforme de locations étudiantes</div>
+          <p>Prototype d’application web avec recherche en langage naturel, filtres intelligents et messagerie propriétaire ↔ étudiant.</p>
+          <div class="card__tags">
+            <span>#Django</span><span>#Python</span><span>#API</span>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__media" aria-label="Aperçu du projet 2">
+          <img src="assets/img/project-2.png" alt=" Aperçu du projet 2">
+        </div>
+        <div class="card__body">
+          <div class="card__title">Automatisation de données</div>
+          <p>Scripts d’extraction et de nettoyage (ETL léger) pour structurer des données en JSON et alimenter un tableau de bord.</p>
+          <div class="card__tags">
+            <span>#Python</span><span>#Pandas</span><span>#ETL</span>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__media" aria-label="Aperçu du projet 3">
+          Visuel projet
+        </div>
+        <div class="card__body">
+          <div class="card__title">Mini-API d’IA</div>
+          <p>Service pour classification de texte et extraction d’entités, prêt à être intégré dans un site web.</p>
+          <div class="card__tags">
+            <span>#Python</span><span>#FastAPI</span><span>#NLP</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer__grid">
+      <div>© <span id="year"></span> Tokam Darius. Tous droits réservés.</div>
+      <div>Construit avec HTML & CSS.</div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const btn=document.querySelector('.menu-toggle');const menu=document.getElementById('primary-nav');
+    if(btn&&menu){btn.addEventListener('click',()=>{const isOpen=menu.classList.toggle('open');btn.setAttribute('aria-expanded',String(isOpen));});}
+  </script>
+
+</body>
+</html>
